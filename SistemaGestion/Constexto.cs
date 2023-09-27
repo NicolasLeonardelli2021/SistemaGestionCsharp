@@ -113,12 +113,10 @@ namespace SistemaGestion
         public static List<Producto> ListarProductos()
         {
             List<Producto> lista = new List<Producto>();
-            List<Usuario> lista2 = new List<Usuario>();
 
             string connectionString = @"Server=ESCRITORIO;DataBase=SistemaGestion;Trusted_Connection=True";
 
             string query = "SELECT Id,Descripciones,Costo,PrecioVenta,Stock,IdUsuario\r\n  FROM SistemaGestion.dbo.Producto";
-            string queryUsuario = "SELECT Id,Nombre,Apellido,NombreUsuario,Contraseña,Mail FROM SistemaGestion.dbo.Usuario";
 
             try
             {
@@ -147,27 +145,7 @@ namespace SistemaGestion
                         }
                     }
 
-                    using (SqlCommand comando = new SqlCommand(queryUsuario, connexion))  // Conecta BD
-                    {
-                        using (SqlDataReader dr = comando.ExecuteReader())
-                        {  // Ejetular consulta
-                            if (dr.HasRows)           // hay Registros? 
-                            {
-                                while (dr.Read())     // Leelos
-                                {                      // Mapea todos los registros
-                                    var Usuario = new Usuario();
-                                    //Usuario.Id = Convert.ToInt32(dr["Id"]);
-                                    Usuario.Nombre = dr["Nombre"].ToString();
-                                    Usuario.Apellido = dr["Apellido"].ToString();
-                                    Usuario.NombreUsuario = dr["NombreUsuario"].ToString();
-                                    Usuario.Contraseña = dr["Contraseña"].ToString();
-                                    Usuario.Mail = dr["Mail"].ToString();
-
-                                    lista2.Add(Usuario);
-                                }
-                            }
-                        }
-                    }
+               
 
                     // Opcional
                     connexion.Close();

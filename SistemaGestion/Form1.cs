@@ -14,9 +14,9 @@ namespace SistemaGestion
         {
             if (e.RowIndex == -1 || e.ColumnIndex == -1) return;
 
-            
+
             int Id = (int)this.dataGridView1.Rows[e.RowIndex].Cells["id"].Value;
-            Producto producto = Constexto.ListarProductos().Where(x=> x.Id == Id).FirstOrDefault();
+            Producto producto = Constexto.ListarProductos().Where(x => x.Id == Id).FirstOrDefault();
 
             if (this.dataGridView1.Columns[e.ColumnIndex].Name == "")
             {
@@ -35,7 +35,16 @@ namespace SistemaGestion
         private void Form1_Load(object sender, EventArgs e)
         {
             CargarProductos();
+            CargarUsuarios();
 
+        }
+
+        private void CargarUsuarios()
+        {
+            List<Usuario> lista = ConstextoUsuario.ListarUsuarios();
+
+            tablaUsuario.AutoGenerateColumns = false;
+            tablaUsuario.DataSource = lista;
         }
 
         private void CargarProductos()
@@ -49,6 +58,11 @@ namespace SistemaGestion
         private void AltaProducto_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tablaUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+       
         }
     }
 }

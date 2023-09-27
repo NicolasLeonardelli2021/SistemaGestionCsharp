@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Editar = new DataGridViewButtonColumn();
+            Descripciones = new DataGridViewTextBoxColumn();
+            Costo = new DataGridViewTextBoxColumn();
+            PrecioVenta = new DataGridViewTextBoxColumn();
+            Stock = new DataGridViewTextBoxColumn();
             tablaUsuario = new DataGridView();
             Nombre = new DataGridViewTextBoxColumn();
             Apellido = new DataGridViewTextBoxColumn();
@@ -36,12 +42,6 @@
             Contraseña = new DataGridViewTextBoxColumn();
             Mail = new DataGridViewTextBoxColumn();
             AltaProducto = new Button();
-            Id = new DataGridViewTextBoxColumn();
-            Editar = new DataGridViewButtonColumn();
-            Descripciones = new DataGridViewTextBoxColumn();
-            Costo = new DataGridViewTextBoxColumn();
-            PrecioVenta = new DataGridViewTextBoxColumn();
-            Stock = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tablaUsuario).BeginInit();
             SuspendLayout();
@@ -60,18 +60,62 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // Id
+            // 
+            Id.DataPropertyName = "Id";
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            Editar.HeaderText = "Editar";
+            Editar.Name = "Editar";
+            Editar.ReadOnly = true;
+            Editar.Text = "Editar";
+            Editar.UseColumnTextForButtonValue = true;
+            // 
+            // Descripciones
+            // 
+            Descripciones.DataPropertyName = "Descripciones";
+            Descripciones.HeaderText = "Descripciones";
+            Descripciones.Name = "Descripciones";
+            Descripciones.ReadOnly = true;
+            // 
+            // Costo
+            // 
+            Costo.DataPropertyName = "Costo";
+            Costo.HeaderText = "Costo";
+            Costo.Name = "Costo";
+            Costo.ReadOnly = true;
+            // 
+            // PrecioVenta
+            // 
+            PrecioVenta.DataPropertyName = "PrecioVenta";
+            PrecioVenta.HeaderText = "PrecioVenta";
+            PrecioVenta.Name = "PrecioVenta";
+            PrecioVenta.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            Stock.DataPropertyName = "Stock";
+            Stock.HeaderText = "Stock";
+            Stock.Name = "Stock";
+            Stock.ReadOnly = true;
+            // 
             // tablaUsuario
             // 
             tablaUsuario.AllowUserToAddRows = false;
             tablaUsuario.AllowUserToDeleteRows = false;
             tablaUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tablaUsuario.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, NombreUsuario, Contraseña, Mail });
-            tablaUsuario.Location = new Point(27, 216);
+            tablaUsuario.Location = new Point(102, 244);
             tablaUsuario.Name = "tablaUsuario";
             tablaUsuario.ReadOnly = true;
             tablaUsuario.RowTemplate.Height = 25;
             tablaUsuario.Size = new Size(529, 150);
             tablaUsuario.TabIndex = 1;
+            tablaUsuario.CellContentClick += tablaUsuario_CellContentClick;
             // 
             // Nombre
             // 
@@ -117,49 +161,6 @@
             AltaProducto.Text = "Agregar Producto";
             AltaProducto.UseVisualStyleBackColor = true;
             AltaProducto.Click += AltaProducto_Click;
-            // 
-            // Id
-            // 
-            Id.DataPropertyName = "Id";
-            Id.HeaderText = "Id";
-            Id.Name = "Id";
-            Id.ReadOnly = true;
-            // 
-            // Editar
-            // 
-            Editar.HeaderText = "Editar";
-            Editar.Name = "Editar";
-            Editar.ReadOnly = true;
-            Editar.Text = "Editar";
-            Editar.UseColumnTextForButtonValue = true;
-            // 
-            // Descripciones
-            // 
-            Descripciones.DataPropertyName = "Descripciones";
-            Descripciones.HeaderText = "Descripciones";
-            Descripciones.Name = "Descripciones";
-            Descripciones.ReadOnly = true;
-            // 
-            // Costo
-            // 
-            Costo.DataPropertyName = "Costo";
-            Costo.HeaderText = "Costo";
-            Costo.Name = "Costo";
-            Costo.ReadOnly = true;
-            // 
-            // PrecioVenta
-            // 
-            PrecioVenta.DataPropertyName = "PrecioVenta";
-            PrecioVenta.HeaderText = "PrecioVenta";
-            PrecioVenta.Name = "PrecioVenta";
-            PrecioVenta.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            Stock.DataPropertyName = "Stock";
-            Stock.HeaderText = "Stock";
-            Stock.Name = "Stock";
-            Stock.ReadOnly = true;
             // 
             // Form1
             // 

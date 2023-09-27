@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nico\\Documents\\Proyectos C#\\SistemaGestion\\SistemaGestion.csproj",
+      "projectUniqueName": "C:\\Users\\Nico\\source\\repos\\SistemaGestionCsharp\\SistemaGestion\\SistemaGestion.csproj",
       "projectName": "SistemaGestion",
-      "projectPath": "C:\\Users\\Nico\\Documents\\Proyectos C#\\SistemaGestion\\SistemaGestion.csproj",
+      "projectPath": "C:\\Users\\Nico\\source\\repos\\SistemaGestionCsharp\\SistemaGestion\\SistemaGestion.csproj",
       "packagesPath": "C:\\Users\\Nico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nico\\Documents\\Proyectos C#\\SistemaGestion\\obj\\",
+      "outputPath": "C:\\Users\\Nico\\source\\repos\\SistemaGestionCsharp\\SistemaGestion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nico\\AppData\\Roaming\\NuGet\\NuGet.Config",
